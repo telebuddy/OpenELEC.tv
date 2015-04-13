@@ -1,0 +1,77 @@
+# lircd.conf
+# brand:                       VLSystem
+# model no. of remote control: MPlay Blast
+# devices being controlled by this remote:
+#
+
+begin remote
+
+    name  telebuddy
+    bits            8
+    eps            30
+    aeps          100
+
+    one             0     0
+    zero            0     0
+    gap          109966
+    toggle_bit_mask 0x0
+
+    begin codes
+	Power			0x41
+	MediaCenter		0x55
+
+	HotKey			0x5A
+	DVD				0x14
+	Menu 			0x5C
+	Sleep			0x58
+
+	Rec				0x11
+	Play			0x09
+	Eject			0x5E
+	Rew				0x0D
+	Pause			0x05
+	FFwd			0x15
+	Prev			0x1A
+	Stop			0x01
+	Next			0x1E
+
+	FullScreen		0x0C
+	AspectRatio		0x10
+	SwitchTask		0x17
+
+	Movie			0x40
+	Music			0x56
+	Photos			0x45
+	TV				0x46
+
+	Up				0x19
+	Down			0x1D
+	OK				0x42
+	Left			0x54
+	Right			0x43
+
+	Back			0x0B
+	Exit			0x1F
+	Mute			0x4A
+	Info			0x4B
+	Open			0x04
+
+	Vol+			0x0A
+	Vol-			0x0E
+	Ch+				0x12
+	Ch-				0x16
+
+	1				0x4D
+	2				0x4E
+	3				0x4F
+	4				0x50
+	5				0x51
+	6				0x52
+	7				0x53
+	8				0x03
+	9				0x07
+	0				0x4C
+	Guide			0x08
+	Timer			0x18
+    end codes
+end remote
