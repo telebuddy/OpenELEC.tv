@@ -43,6 +43,6 @@ makeinstall_target() {
 }
 
 post_makeinstall_target() {
-  python -Wi -t -B $ROOT/$TOOLCHAIN/lib/python2.7/compileall.py $INSTALL/usr/share/kodi/addons/service.xbmc.lcdproc/resources/lib/ -f
-  rm -rf `find $INSTALL/usr/share/kodi/addons/service.xbmc.lcdproc/resources/lib/ -name "*.py"`
+  python -Wi -t -B $ROOT/$TOOLCHAIN/lib/python2.7/compileall.py $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc/resources/lib/ -f
+  rm -rf `find $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc/resources/lib/ -name "*.py"`
 }
