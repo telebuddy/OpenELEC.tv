@@ -1,0 +1,28 @@
+<lcd>
+   <!-- advanced configurables, XML-uncomment and set options as desired -->
+
+   <!-- scrollseparator: string to use as separator if text gets scrolled -->
+   <!--scrollseparator> </scrollseparator-->
+
+   <!-- progressbarsurroundings: put progress bars in square brackets (on/off) -->
+   <!--progressbarsurroundings>off</progressbarsurroundings-->
+
+   <!-- icontextoffset: offset for text displayed after any play/pause icons -->
+   <!--icontextoffset>2</icontextoffset-->
+
+   <!-- allowemptylines: show text lines without contents or filter them (on/off) -->
+   <!--allowemptylines>off</allowemptylines-->
+
+   <!-- centerbigdigits: (try to) align big numbers centered on the display (on/off) -->
+   <!--centerbigdigits>off</centerbigdigits-->
+
+   <!-- disableplayindicatoronpause: turn off any playing indicator (extra stuff) when pausing playback (on/off) --> 
+   <!--disableplayindicatoronpause>off</disableplayindicatoronpause-->
+
+   <general>
+      <line>$INFO[LCD.TimeWide21]</line>
+   </general>
+   <screensaver>
+      <line>$INFO[LCD.TimeWide21]</line>
+   </screensaver>
+</lcd>
