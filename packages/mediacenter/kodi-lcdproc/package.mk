@@ -23,17 +23,14 @@ PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/herrnst/script.xbmc.lcdproc"
 PKG_URL="$AZURE_SRC/$PKG_NAME-$PKG_VERSION.zip"
-PKG_SOURCE_DIR="kodi-lcdproc"
 PKG_DEPENDS_TARGET="toolchain Python pygobject kodi"
 PKG_PRIORITY="optional"
-PKG_SECTION=""
+PKG_SECTION="multimedia"
 PKG_SHORTDESC="kodi-lcdproc: LCDProc Addon for OpenELEC"
 PKG_LONGDESC="kodi-lcdproc: LCDProc Addon for OpenELEC"
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
-
-PKG_MAKE_OPTS_TARGET="DISTRONAME=$DISTRONAME ROOT_PASSWORD=$ROOT_PASSWORD"
 
 make_target() {
   : #nop
