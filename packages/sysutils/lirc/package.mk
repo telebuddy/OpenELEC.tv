@@ -64,6 +64,6 @@ post_makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/udev
     cp $PKG_DIR/scripts/lircd_wakeup_enable $INSTALL/usr/lib/udev
 
-  mkdir -p $INSTALL/storage/.config
-    cp $PKG_DIR/config/lircd.conf.telebuddy $INSTALL/storage/.config/lircd.conf
+  mkdir -p $INSTALL/usr/config
+    cp $PKG_DIR/config/lircd.conf.telebuddy $INSTALL/usr/config/lircd.conf
 }
