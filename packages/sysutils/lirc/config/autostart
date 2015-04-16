@@ -1,0 +1,2 @@
+LIRC=$(ps ax|grep eventlircd|sed -n 's/.*socket=\([^"]*\/\).*/\1/p')
+/usr/sbin/lircd -H mplay2 -d /dev/ttyUSB0 -u -o ${LIRC}lircd -P ${LIRC}lircd.pid /storage/.config/lircd.conf

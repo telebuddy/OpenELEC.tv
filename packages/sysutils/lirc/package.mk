@@ -66,4 +66,5 @@ post_makeinstall_target() {
 
   mkdir -p $INSTALL/usr/config
     cp $PKG_DIR/config/lircd.conf.telebuddy $INSTALL/usr/config/lircd.conf
+	cat $PKG_DIR/config/autostart >> $INSTALL/usr/config/autostart.sh
 }
