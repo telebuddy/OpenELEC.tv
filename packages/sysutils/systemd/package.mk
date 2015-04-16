@@ -237,5 +237,6 @@ post_install() {
   enable_service machine-id.service
   enable_service debugconfig.service
   enable_service userconfig.service
+  enable_service usercache.service
   enable_service hwdb.service
 }
