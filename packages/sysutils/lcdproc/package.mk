@@ -49,21 +49,23 @@ post_makeinstall_target() {
   rm -rf $INSTALL/usr/bin
 
   sed -e "s|^DriverPath=.*$|DriverPath=/usr/lib/lcdproc/|" \
-      -e "s|^Driver=.*$|Driver=irtrans|" \
+      -e "s|^Driver=.*$|Driver=vlsys_m428|" \
       -e "s|^#Foreground=.*$|Foreground=no|" \
       -e "s|^#ServerScreen=.*$|ServerScreen=blank|" \
       -e "s|^#Backlight=.*$|Backlight=open|" \
       -e "s|^#Heartbeat=.*$|Heartbeat=open|" \
       -e "s|^#TitleSpeed=.*$|TitleSpeed=4|" \
-      -e "s|^#Hello=\"  Welcome to\"|Hello=\"Welcome to\"|" \
-      -e "s|^#Hello=\"   LCDproc!\"|Hello=\"$DISTRONAME\"|" \
-      -e "s|^#GoodBye=\"Thanks for using\"|GoodBye=\"Thanks for using\"|" \
-      -e "s|^#GoodBye=\"   LCDproc!\"|GoodBye=\"$DISTRONAME\"|" \
+      -e "s|^#Hello=\"  Welcome to\"|Hello=\"   $DISTRONAME\"|" \
+      -e "s|^#Hello=\"   LCDproc!\"|Hello=\"\"|" \
+      -e "s|^#GoodBye=\"Thanks for using\"|GoodBye=\"   $DISTRONAME\"|" \
+      -e "s|^#GoodBye=\"   LCDproc!\"|GoodBye=\"\"|" \
       -i $INSTALL/etc/LCDd.conf
 
     mkdir -p $INSTALL/usr/lib/openelec
       cp $PKG_DIR/scripts/lcd-wrapper $INSTALL/usr/lib/openelec
 
+    mkdir -p $INSTALL/usr/cache/services
+      cp $PKG_DIR/config/lcdd.conf $INSTALL/usr/cache/services
 }
 
 post_install() {
