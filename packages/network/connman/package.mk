@@ -67,7 +67,7 @@ PKG_CONFIGURE_OPTS_TARGET="WPASUPPLICANT=/usr/bin/wpa_supplicant \
                            --disable-silent-rules"
 
 
-PKG_MAKE_OPTS_TARGET="storagedir=/storage/.config/connman \
+PKG_MAKE_OPTS_TARGET="storagedir=/storage/.cache/connman \
                       statedir=/run/connman"
 
 post_makeinstall_target() {
@@ -96,9 +96,6 @@ post_makeinstall_target() {
 
   mkdir -p $INSTALL/usr/config
     cp $PKG_DIR/config/hosts.conf $INSTALL/usr/config
-	
-  mkdir -p $INSTALL/usr/config/connman
-    cp $PKG_DIR/config/settings $INSTALL/usr/config/connman
 }
 
 post_install() {
