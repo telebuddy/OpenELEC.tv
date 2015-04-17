@@ -31,7 +31,6 @@
     <tvshow>
       <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
     </tvshow> 
-    <general>
     <xbelaunch>
       <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
     </xbelaunch>
