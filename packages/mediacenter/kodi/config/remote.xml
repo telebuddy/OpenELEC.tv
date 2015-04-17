@@ -1,0 +1,502 @@
+<!-- The format is:                      -->
+<!--    <device>                         -->
+<!--      <button>action</button>        -->
+<!--    </device>                        -->
+<keymap>
+  <global>
+    <remote>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <nine>Mute</nine>
+      <play>Play</play>
+      <pause>Pause</pause>
+      <stop>Stop</stop>
+      <forward>FastForward</forward>
+      <reverse>Rewind</reverse>
+      <left>Left</left>
+      <right>Right</right>
+      <up>Up</up>
+      <down>Down</down>
+      <select>Select</select>
+      <pageplus>PageUp</pageplus>
+      <pageminus>PageDown</pageminus>
+      <back>ParentDir</back>
+      <menu>PreviousMenu</menu>
+      <title>ContextMenu</title>
+      <info>Info</info>
+      <skipplus>SkipNext</skipplus>
+      <skipminus>SkipPrevious</skipminus>
+      <display>FullScreen</display>
+      <start>XBMC.ActivateWindow(Home)</start>
+      <record>Screenshot</record>
+      <volumeplus>VolumeUp</volumeplus>
+      <volumeminus>VolumeDown</volumeminus>
+      <mute>Mute</mute>
+      <!-- <dvd>XBMC.ActivateWindow(PlayerControls)</dvd>
+      <myvideo>XBMC.ActivateWindow(MyVideos)</myvideo> -->
+      <myvideo>XBMC.ActivateWindow(MyVideoLibrary,MovieTitles,return)</myvideo>
+      <mymusic>XBMC.ActivateWindow(MusicLibrary,Albums,return)</mymusic>
+      <mytv>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</mytv>
+      <mypictures>XBMC.ActivateWindow(MyPictures)</mypictures>
+      <hash>XBMC.ActivateWindow(Settings)</hash>
+      <star>XBMC.EjectTray()</star>
+      <xbox>XBMC.ActivateWindow(shutdownmenu)</xbox>
+      <power>XBMC.Powerdown()</power>
+    </remote>
+  </global>
+
+  <Home>
+    <remote>
+      <menu>XBMC.Skin.ToggleSetting(HomeViewToggle)</menu>
+      <info>XBMC.ActivateWindow(SystemInfo)</info>
+      <clear>XBMC.ActivateWindow(Weather)</clear>
+      <hash>XBMC.ActivateWindow(Settings)</hash>
+    </remote>
+  </Home>
+
+  
+  <MyFiles>
+    <remote>
+      <zero>Delete</zero>
+      <one>Highlight</one>
+      <four>Copy</four>
+      <seven>Move</seven>
+      <clear>Delete</clear>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <nine>Mute</nine>
+    </remote>
+  </MyFiles>
+
+  <MyMusicPlaylist>
+    <remote>
+      <back>Playlist</back> <!-- Close playlist -->
+      <clear>Delete</clear>
+      <zero>Delete</zero>
+      <two>MoveItemUp</two>
+      <five>MoveItemDown</five>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <nine>Mute</nine>
+    </remote>
+  </MyMusicPlaylist>
+
+  <MyMusicPlaylistEditor>
+    <remote>
+      <zero>Queue</zero>
+    </remote>
+  </MyMusicPlaylistEditor>
+
+  
+  <MyMusicFiles>
+     <remote>
+      <zero>Queue</zero>
+      <star>Home</star>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <menu>XBMC.ActivateWindow(MusicOSD)</menu>
+      <nine>Mute</nine>
+    </remote>
+  </MyMusicFiles>
+
+  <MyMusicLibrary>
+    <remote>
+      <zero>Queue</zero>
+      <star>Home</star>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <menu>XBMC.ActivateWindow(MusicOSD)</menu>
+      <nine>Mute</nine>
+    </remote>
+  </MyMusicLibrary>
+
+  <FullscreenVideo>
+    <remote>
+      <left>StepBack</left>
+      <right>StepForward</right>
+      <up>BigStepForward</up>
+      <down>BigStepBack</down>
+      <back>SmallStepBack</back>
+      <menu>OSD</menu>
+      <!-- <start>OSD</start> -->
+      <title>CodecInfo</title>
+      <!-- <enter>AspectRatio</enter> -->
+      <info>Info</info>
+      <display>AspectRatio</display>
+   </remote>
+  </FullscreenVideo>
+
+  <FullscreenInfo>
+    <remote>
+      <title>CodecInfo</title>
+      <info>Close</info>
+      <menu>OSD</menu>
+    </remote>
+  </FullscreenInfo>
+
+  <PlayerControls>
+    <remote>
+      <menu>Close</menu>
+      <skipplus>SkipNext</skipplus>
+      <skipminus>SkipPrevious</skipminus>
+    </remote>
+  </PlayerControls>
+
+  <Visualisation>
+    <remote>
+      <left>PreviousPreset</left>
+      <right>NextPreset</right>
+      <up>IncreaseRating</up>
+      <down>DecreaseRating</down>
+      <back>LockPreset</back>
+      <title>CodecInfo</title>
+      <!-- <start>XBMC.ActivateWindow(MusicOSD)</start> -->
+      <start>XBMC.ActivateWindow(Home)</start>
+      <select>XBMC.ActivateWindow(VisualisationPresetList)</select>
+      <menu>XBMC.ActivateWindow(MusicOSD)</menu>
+      <info>Info</info>
+    </remote>
+  </Visualisation>
+
+  <MusicOSD>
+    <remote>
+      <menu>Close</menu>
+      <title>Info</title>
+      <info>CodecInfo</info>
+    </remote>
+  </MusicOSD>
+
+  <VisualisationSettings>
+    <remote>
+      <menu>Close</menu>
+    </remote>
+  </VisualisationSettings>
+
+  <VisualisationPresetList>
+    <remote>
+      <menu>Close</menu>
+    </remote>
+  </VisualisationPresetList>
+
+  <SlideShow>
+    <remote>
+      <zero>ZoomNormal</zero>
+      <one>ZoomLevel1</one>
+      <two>ZoomLevel2</two>
+      <three>ZoomLevel3</three>
+      <four>ZoomLevel4</four>
+      <five>ZoomLevel5</five>
+      <six>ZoomLevel6</six>
+      <seven>ZoomLevel7</seven>
+      <eight>ZoomLevel8</eight>
+      <nine>ZoomLevel9</nine>
+      <info>CodecInfo</info>
+      <skipplus>NextPicture</skipplus>
+      <skipminus>PreviousPicture</skipminus>
+      <title>Info</title>
+      <select>Rotate</select>
+      <back>PreviousMenu</back>
+    </remote>
+  </SlideShow>
+
+  <ScreenCalibration>
+   <remote>
+      <select>NextCalibration</select>
+      <enter>NextCalibration</enter>
+      <zero>ResetCalibration</zero>
+      <display>NextResolution</display>
+    </remote>
+  </ScreenCalibration>
+
+  <GUICalibration>
+    <remote>
+      <select>NextCalibration</select>
+      <enter>NextCalibration</enter>
+      <zero>ResetCalibration</zero>
+    </remote>
+  </GUICalibration>
+
+  <SelectDialog>
+    <remote>
+      <back>Close</back>
+    </remote>
+  </SelectDialog>
+
+  
+  <VideoOSD>
+    <remote>
+      <back>PreviousMenu</back>
+      <menu>Close</menu>
+      <skipplus>SkipNext</skipplus>
+      <skipminus>SkipPrevious</skipminus>
+      <!-- <start>Close</start> -->
+    </remote>
+  </VideoOSD>
+
+  <VideoMenu>
+    <remote>
+      <menu>OSD</menu>
+      <back>PreviousMenu</back>
+      <skipplus>SkipNext</skipplus>
+      <skipminus>SkipPrevious</skipminus>
+      <info>Info</info>
+      <title>CodecInfo</title>
+      <zero>Number0</zero>
+      <one>Number1</one>
+      <two>Number2</two>
+      <three>Number3</three>
+      <four>Number4</four>
+      <five>Number5</five>
+      <six>Number6</six>
+      <seven>Number7</seven>
+      <eight>Number8</eight>
+      <nine>Number9</nine>
+    </remote>
+  </VideoMenu>
+
+  <OSDVideoSettings>
+    <remote>
+      <back>Close</back>
+      <menu>Close</menu>
+      <!-- <start>Close</start> -->
+    </remote>
+  </OSDVideoSettings>
+
+  <OSDAudioSettings>
+    <remote>
+      <back>Close</back>
+      <menu>Close</menu>
+      <!-- <start>Close</start> -->
+    </remote>
+  </OSDAudioSettings>
+
+  <VideoBookmarks>
+    <remote>
+      <back>Close</back>
+      <menu>Close</menu>
+      <!-- <start>Close</start> -->
+      <zero>Delete</zero>
+    </remote>
+  </VideoBookmarks>
+
+  
+  <MyVideoLibrary>
+    <remote>
+      <zero>Queue</zero>
+      <clear>Delete</clear>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <nine>Mute</nine>
+    </remote>
+  </MyVideoLibrary>
+
+  <MyVideoFiles>
+    <remote>
+      <zero>Queue</zero>
+      <star>Queue</star>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <nine>Mute</nine>
+    </remote>
+  </MyVideoFiles>
+
+  <MyVideoPlaylist>
+    <remote>
+      <back>Playlist</back> <!-- Close playlist -->
+      <clear>Delete</clear>
+      <zero>Delete</zero>
+      <two>MoveItemUp</two>
+      <five>MoveItemDown</five>
+      <three>VolumeUp</three>
+      <six>VolumeDown</six>
+      <nine>Mute</nine>
+    </remote>
+  </MyVideoPlaylist>
+
+  <VirtualKeyboard>
+    <remote>
+      <back>BackSpace</back>
+      <star>Shift</star>
+      <hash>Symbols</hash>
+      <zero>Number0</zero>
+      <one>Number1</one>
+      <two>Number2</two>
+      <three>Number3</three>
+      <four>Number4</four>
+      <five>Number5</five>
+      <six>Number6</six>
+      <seven>Number7</seven>
+      <eight>Number8</eight>
+      <nine>Number9</nine>
+      <pageminus>CursorLeft</pageminus>
+      <pageplus>CursorRight</pageplus>
+    </remote>
+  </VirtualKeyboard>
+
+  <ContextMenu>
+    <remote>
+      <title>Close</title>
+      <back>Close</back>
+    </remote>
+  </ContextMenu>
+
+  <FileStackingDialog>
+    <remote>
+      <back>Close</back>
+    </remote>
+  </FileStackingDialog>
+
+  <Scripts>
+    <remote>
+      <info>XBMC.ActivateWindow(ScriptsDebugInfo)</info>
+    </remote>
+  </Scripts>
+
+  <ScriptsDebugInfo>
+    <remote>
+      <info>Info</info> <!-- clears debug python info -->
+    </remote>
+  </ScriptsDebugInfo>
+
+  <NumericInput>
+    <remote>
+      <zero>Number0</zero>
+      <one>Number1</one>
+      <two>Number2</two>
+      <three>Number3</three>
+      <four>Number4</four>
+      <five>Number5</five>
+      <six>Number6</six>
+      <seven>Number7</seven>
+      <eight>Number8</eight>
+      <nine>Number9</nine>
+      <back>BackSpace</back>
+    </remote>
+  </NumericInput>
+
+  <Weather>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </Weather>
+
+  <Settings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </Settings>
+
+  <MyPicturesSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </MyPicturesSettings>
+
+  <MyProgramsSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </MyProgramsSettings>
+
+  <MyWeatherSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </MyWeatherSettings>
+
+  <MyMusicSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </MyMusicSettings>
+
+  <SystemSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </SystemSettings>
+
+  <MyVideosSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </MyVideosSettings>
+
+  <NetworkSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </NetworkSettings>
+
+  <AppearanceSettings>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </AppearanceSettings>
+
+  <Profiles>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </Profiles>
+
+  <systeminfo>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </systeminfo>
+
+  <shutdownmenu>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </shutdownmenu>
+
+  <submenu>
+    <remote>
+      <back>PreviousMenu</back>
+    </remote>
+  </submenu>
+
+  <MusicInformation>
+    <remote>
+      <back>Close</back>
+    </remote>
+  </MusicInformation>
+
+  <MovieInformation>
+    <remote>
+      <back>Close</back>
+    </remote>
+  </MovieInformation>
+
+  <LockSettings>
+    <remote>
+      <menu>Close</menu>
+      <back>PreviousMenu</back>
+    </remote>
+  </LockSettings>
+
+  <ProfileSettings>
+    <remote>
+      <menu>Close</menu>
+      <back>PreviousMenu</back>
+    </remote>
+  </ProfileSettings>
+
+  <PictureInfo>
+    <remote>
+      <skipplus>NextPicture</skipplus>
+      <skipminus>PreviousPicture</skipminus>
+      <info>Close</info>
+      <back>Close</back> 
+    </remote>
+  </PictureInfo>
+
+  <Favourites>
+    <remote>
+      <back>Close</back> 
+    </remote>
+  </Favourites>
+
+</keymap>

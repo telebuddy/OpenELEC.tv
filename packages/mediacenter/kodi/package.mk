@@ -382,6 +382,9 @@ post_makeinstall_target() {
   mkdir -p $INSTALL/usr/share/kodi/config
     cp $PKG_DIR/config/guisettings.xml $INSTALL/usr/share/kodi/config
     cp $PKG_DIR/config/sources.xml $INSTALL/usr/share/kodi/config
+    cp $PKG_DIR/config/Lircmap.xml $INSTALL/usr/share/kodi/config
+    cp $PKG_DIR/config/remote.xml $INSTALL/usr/share/kodi/config
+	
 
 # install project specific configs
     if [ -f $PROJECT_DIR/$PROJECT/kodi/guisettings.xml ]; then

@@ -42,6 +42,27 @@ if [ ! -f $HOME/.kodi/userdata/guisettings.xml ] ; then
   fi
 fi
 
+# custom LCD.xml
+if [ ! -f $HOME/.kodi/userdata/LCD.xml ] ; then
+  if [ -f /usr/share/kodi/config/LCD.xml ]; then
+    cp /usr/share/kodi/config/LCD.xml $HOME/.kodi/userdata
+  fi
+fi
+
+# custom Lircmap.xml
+if [ ! -f $HOME/.kodi/userdata/Lircmap.xml ] ; then
+  if [ -f /usr/share/kodi/config/Lircmap.xml ]; then
+    cp /usr/share/kodi/config/Lircmap.xml $HOME/.kodi/userdata
+  fi
+fi
+
+# custom remote.xml
+if [ ! -f $HOME/.kodi/userdata/remote.xml ] ; then
+  if [ -f /usr/share/kodi/config/remote.xml ]; then
+    cp /usr/share/kodi/config/remote.xml $HOME/.kodi/userdata
+  fi
+fi
+
 if [ -e /run/lirc/lircd.irtrans ]; then
   KODI_ARGS="--lircdev /run/lirc/lircd.irtrans"
 else

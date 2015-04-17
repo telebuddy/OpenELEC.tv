@@ -55,9 +55,9 @@ post_makeinstall_target() {
       -e "s|^#Backlight=.*$|Backlight=open|" \
       -e "s|^#Heartbeat=.*$|Heartbeat=open|" \
       -e "s|^#TitleSpeed=.*$|TitleSpeed=4|" \
-      -e "s|^#Hello=\"  Welcome to\"|Hello=\"   $DISTRONAME\"|" \
+      -e "s|^#Hello=\"  Welcome to\"|Hello=\"  $DISTRONAME\"|" \
       -e "s|^#Hello=\"   LCDproc!\"|Hello=\"\"|" \
-      -e "s|^#GoodBye=\"Thanks for using\"|GoodBye=\"   $DISTRONAME\"|" \
+      -e "s|^#GoodBye=\"Thanks for using\"|GoodBye=\"  $DISTRONAME\"|" \
       -e "s|^#GoodBye=\"   LCDproc!\"|GoodBye=\"\"|" \
       -i $INSTALL/etc/LCDd.conf
 

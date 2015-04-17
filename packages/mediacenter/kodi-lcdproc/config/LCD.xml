@@ -5,7 +5,7 @@
    <!--scrollseparator> </scrollseparator-->
 
    <!-- progressbarsurroundings: put progress bars in square brackets (on/off) -->
-   <!--progressbarsurroundings>off</progressbarsurroundings-->
+   <progressbarsurroundings>on</progressbarsurroundings>
 
    <!-- icontextoffset: offset for text displayed after any play/pause icons -->
    <!--icontextoffset>2</icontextoffset-->
@@ -19,10 +19,32 @@
    <!-- disableplayindicatoronpause: turn off any playing indicator (extra stuff) when pausing playback (on/off) --> 
    <!--disableplayindicatoronpause>off</disableplayindicatoronpause-->
 
+   <navigation>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </navigation>
+    <music>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </music>
+    <video>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </video>
+    <tvshow>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </tvshow> 
+    <general>
+    <xbelaunch>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </xbelaunch>
+    <pvrtv>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </pvrtv>
+    <pvrradio>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
+    </pvrradio>
    <general>
-      <line>$INFO[LCD.TimeWide21]</line>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
    </general>
    <screensaver>
-      <line>$INFO[LCD.TimeWide21]</line>
+      <line>$INFO[LCD.AlignCenter]$INFO[System.Time]</line>
    </screensaver>
 </lcd>

@@ -46,9 +46,6 @@ makeinstall_target() {
 }
 
 post_makeinstall_target() {
-  python -Wi -t -B $ROOT/$TOOLCHAIN/lib/python2.7/compileall.py $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc/resources/lib/ -f
-  rm -rf `find $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc/resources/lib/ -name "*.py"`
-  
-  mkdir -p $INSTALL/usr/config
-    cp $PKG_DIR/config/LCD.xml $INSTALL/usr/config
+  mkdir -p $INSTALL/usr/share/kodi/config
+    cp $PKG_DIR/config/LCD.xml $INSTALL/usr/share/kodi/config
 }
