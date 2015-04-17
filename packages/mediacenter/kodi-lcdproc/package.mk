@@ -43,6 +43,7 @@ makeinstall_target() {
     cp *.txt $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc
     cp *.xml $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc
     cp *.png $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc
+    cp *.py $INSTALL/usr/share/kodi/addons/script.xbmc.lcdproc
 }
 
 post_makeinstall_target() {
