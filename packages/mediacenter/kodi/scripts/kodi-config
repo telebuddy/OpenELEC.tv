@@ -57,12 +57,18 @@ if [ ! -f $HOME/.kodi/userdata/Lircmap.xml ] ; then
 fi
 
 # custom remote.xml
-if [ ! -f $HOME/.kodi/userdata/remote.xml ] ; then
+if [ ! -f $HOME/.kodi/userdata/keymaps/remote.xml ] ; then
   if [ -f /usr/share/kodi/config/remote.xml ]; then
-    cp /usr/share/kodi/config/remote.xml $HOME/.kodi/userdata
+    cp /usr/share/kodi/config/remote.xml $HOME/.kodi/userdata/keymaps
   fi
 fi
 
+# custom oe_settings.xml
+if [ ! -d $HOME/.kodi/userdata/addon_data/service.openelec.settings ] ; then
+  if [ -d /usr/share/kodi/config/service.openelec.settings ]; then
+    cp -r /usr/share/kodi/config/service.openelec.settings $HOME/.kodi/userdata/addon_data
+  fi
+fi
 
 if [ -e /run/lirc/lircd.irtrans ]; then
   KODI_ARGS="--lircdev /run/lirc/lircd.irtrans"
