@@ -384,6 +384,7 @@ post_makeinstall_target() {
     cp $PKG_DIR/config/sources.xml $INSTALL/usr/share/kodi/config
     cp $PKG_DIR/config/Lircmap.xml $INSTALL/usr/share/kodi/config
     cp $PKG_DIR/config/remote.xml $INSTALL/usr/share/kodi/config
+    cp -R $PKG_DIR/config/service.openelec.settings $INSTALL/usr/share/kodi/config
 	
 
 # install project specific configs
