@@ -11,6 +11,11 @@
           <path pathversion="1">/storage/tvshows/</path>
           <allowsharing>true</allowsharing>
       </source>
+      <source>
+          <name>Movies</name>
+          <path pathversion="1">/storage/movies/</path>
+          <allowsharing>true</allowsharing>
+      </source>
   </video>
   <music>
       <default pathversion="1"></default>
