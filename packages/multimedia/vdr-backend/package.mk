@@ -16,14 +16,14 @@
 #  along with OpenELEC.  If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-PKG_NAME="service.multimedia.vdr-addon"
+PKG_NAME="vdr-backend"
 PKG_VERSION="6.0.0"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.tvdr.de"
 PKG_URL="$AZURE_SRC/$PKG_NAME-$PKG_VERSION.zip"
-PKG_SOURCE_DIR="$PKG_NAME/$PKG_NAME"
+PKG_SOURCE_DIR="$PKG_NAME/service.multimedia.vdr-addon"
 PKG_DEPENDS_TARGET="toolchain Python pygobject kodi"
 PKG_PRIORITY="optional"
 PKG_SECTION="multimedia"
