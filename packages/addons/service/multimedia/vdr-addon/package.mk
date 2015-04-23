@@ -85,8 +85,5 @@ addon() {
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi
   cp -P $VDR_PLUGIN_RESTFULAPI_DIR/web/* $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi
-  cp -P $VDR_PLUGIN_RESTFULAPI_DIR/API.html $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi
-  
-  sed -e "s|^default=\"/storage/videos\"|default=\"/storage/recordings\"|" \	  
-      -i $PKG_DIR/source/resources/settings.xml
+  cp -P $VDR_PLUGIN_RESTFULAPI_DIR/API.html $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi  
 }
