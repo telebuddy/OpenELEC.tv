@@ -43,5 +43,5 @@ if [ "$MEDIACENTER" = "kodi" ]; then
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET pycrypto"
 
 # other packages
-  PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET OpenELEC-settings kodi-lcdproc vdr-backend"
+  PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET OpenELEC-settings kodi-lcdproc"
 fi
