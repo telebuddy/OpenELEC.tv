@@ -24,7 +24,7 @@ PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.openelec.tv"
 PKG_URL=""
-PKG_DEPENDS_TARGET="toolchain attr libcap vdr vdr-plugin-vnsiserver vdr-wirbelscan vdr-wirbelscancontrol vdr-plugin-dvbapi vdr-live vdr-epgsearch vdr-plugin-xmltv2vdr vdr-plugin-restfulapi"
+PKG_DEPENDS_TARGET="toolchain attr libcap vdr vdr-plugin-vnsiserver vdr-wirbelscan vdr-wirbelscancontrol vdr-plugin-dvbapi vdr-live vdr-epgsearch vdr-plugin-xmltv2vdr vdr-plugin-eepg vdr-plugin-epgfixer vdr-plugin-restfulapi"
 PKG_PRIORITY="optional"
 PKG_SECTION="service.multimedia"
 PKG_SHORTDESC="vdr: A powerful DVB TV application"
@@ -48,6 +48,8 @@ addon() {
   VDR_DIR="$(get_build_dir vdr)"
   VDR_LIVE_DIR="$(get_build_dir vdr-live)"
   VDR_PLUGIN_VNSISERVER_DIR="$(get_build_dir vdr-plugin-vnsiserver)"
+  VDR_PLUGIN_XMLTV2VDR="$(get_build_dir vdr-plugin-xmltv2vdr)"
+  VDR_PLUGIN_EPGFIXER_DIR="$(get_build_dir vdr-plugin-epgfixer)"
   VDR_PLUGIN_RESTFULAPI_DIR="$(get_build_dir vdr-plugin-restfulapi)"
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config
@@ -66,27 +68,37 @@ addon() {
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config/plugins
 
+  mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config/epgsources/
+  cp $VDR_PLUGIN_XMLTV2VDR/dist/epgdata2xmltv/epgdata2xmltv.dist $ADDON_BUILD/$PKG_ADDON_ID/config/epgsources/epgdata2xmltv
+
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/plugin
   cp -PR $VDR_PLUGIN_VNSISERVER_DIR/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
   cp -PR $(get_build_dir vdr-wirbelscan)/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
   cp -PR $(get_build_dir vdr-wirbelscancontrol)/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
   cp -PR $(get_build_dir vdr-plugin-dvbapi)/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
+  cp -PR $(get_build_dir vdr-plugin-eepg)/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
   cp -PR $VDR_LIVE_DIR/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
+  cp -PR $(get_build_dir vdr-epgsearch)/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
+  cp -PR $VDR_PLUGIN_XMLTV2VDR/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
+  cp -PR $VDR_PLUGIN_EPGFIXER_DIR/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
   cp -PR $VDR_PLUGIN_RESTFULAPI_DIR/libvdr*.so.* $ADDON_BUILD/$PKG_ADDON_ID/plugin
+
+  mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config/plugins/eepg
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config/plugins/vnsiserver
   cp -PR $VDR_PLUGIN_VNSISERVER_DIR/vnsiserver/allowed_hosts.conf $ADDON_BUILD/$PKG_ADDON_ID/config/plugins/vnsiserver
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
   cp -P $VDR_DIR/vdr $ADDON_BUILD/$PKG_ADDON_ID/bin/vdr.bin
+  cp -P $VDR_PLUGIN_XMLTV2VDR/dist/epgdata2xmltv/epgdata2xmltv $ADDON_BUILD/$PKG_ADDON_ID/bin
 
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/lib
   cp -PL $(get_build_dir tntnet)/.install_pkg/usr/lib/libtntnet.so.12 $ADDON_BUILD/$PKG_ADDON_ID/lib
 
+  mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config/plugins/epgfixer
+  cp -PR $VDR_PLUGIN_EPGFIXER_DIR/epgfixer/*.conf $ADDON_BUILD/$PKG_ADDON_ID/config/plugins/epgfixer
+
   mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi
   cp -P $VDR_PLUGIN_RESTFULAPI_DIR/web/* $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi
   cp -P $VDR_PLUGIN_RESTFULAPI_DIR/API.html $ADDON_BUILD/$PKG_ADDON_ID/res/plugins/restfulapi
-  
-  sed -e "s|^default=\"/storage/videos\"|default=\"/storage/recordings\"|" \	  
-      -i $ADDON_BUILD/$PKG_ADDON_ID/resources/settings.xml
 }

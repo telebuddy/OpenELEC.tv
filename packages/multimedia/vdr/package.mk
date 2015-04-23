@@ -45,7 +45,7 @@ pre_make_target() {
   cat > Make.config <<EOF
   PLUGINLIBDIR = /usr/lib/vdr
   PREFIX = /usr
-  VIDEODIR = /storage/recordings
+  VIDEODIR = /storage/videos
   CONFDIR = /storage/.config/vdr
   LOCDIR = /usr/share/locale
 
