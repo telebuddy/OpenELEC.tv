@@ -3,8 +3,6 @@ OfflineMode=false
 
 [Wired]
 Enable=true
-Tethering=false
 
 [WiFi]
 Enable=true
-Tethering=false

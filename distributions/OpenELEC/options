@@ -2,7 +2,7 @@
   DISTRONAME="OpenELEC"
 
 # short project description
-  DESCRIPTION="OpenELEC is a fast and userfriendly Kodi Entertainment Center distribution."
+  DESCRIPTION="OpenELEC is a fast and user-friendly Kodi Entertainment Center distribution."
 
 # Welcome Message for e.g. SSH Server (up to 5 Lines)
   GREETING0="##############################################"
@@ -121,9 +121,7 @@
 # Xorg Graphic drivers to use (all / i915,i965,r200,r300,r600,nvidia)
 # Space separated list is supported,
 # e.g. GRAPHIC_DRIVERS="i915 i965 r300 r600 radeonsi nvidia"
-  if [ "$TARGET_ARCH" = "x86_64" ]; then
-    GRAPHIC_DRIVERS="r300 r600 radeonsi i915 i965 nvidia"
-  fi
+  GRAPHIC_DRIVERS="r300 r600 radeonsi i915 i965 nvidia"
 
 # build and install remote support (yes / no)
   REMOTE_SUPPORT="yes"
